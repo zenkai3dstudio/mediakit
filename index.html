@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zenkai3D Studio · Media kit</title>
+<meta name="description" content="Pop-culture figures, 3D printed and painted on camera. Audience numbers, best reels and brands, updated every week.">
+<meta property="og:title" content="Zenkai3D Studio · Media kit">
+<meta property="og:description" content="Pop-culture figures, 3D printed and painted on camera. Audience numbers, best reels and brands, updated every week.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#F2F2F0">
+<link rel="icon" href="icona.jpg">
+<link rel="apple-touch-icon" href="icona.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F2F2F0; --surface:#FFFFFF; --ink:#191A1C; --ink-soft:#6B6D72;
+  --line:#D9D9D5; --line-strong:#B6B6B1; --good:#3F7D4C;
+  --r:3px; --brand-blue:#3E96C2; --brand-orange:#E67324;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#131416; --surface:#1B1C1F; --ink:#EDEDEA; --ink-soft:#95979C;
+    --line:#2E3033; --line-strong:#45484C; --good:#6FBF7F;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#131416; --surface:#1B1C1F; --ink:#EDEDEA; --ink-soft:#95979C;
+  --line:#2E3033; --line-strong:#45484C; --good:#6FBF7F;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:"Archivo","Helvetica Neue",Arial,sans-serif;
+  font-size:15px;line-height:1.5;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+[hidden]{display:none!important}
+a{color:inherit}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px 70px}
+
+header{padding:34px 0 8px}
+.brandbar{display:flex;align-items:center;gap:9px}
+.brandmark{width:30px;height:30px;border-radius:7px;display:block;object-fit:cover;flex:none;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+.brandname{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.brandname b{color:var(--brand-blue)}
+.brandname i{color:var(--brand-orange);font-style:normal}
+.upd{margin-left:auto;font-size:12px;color:var(--ink-soft);white-space:nowrap}
+h1{font-size:clamp(30px,6.4vw,52px);font-weight:800;letter-spacing:-.032em;line-height:1;margin:38px 0 0;max-width:15ch}
+h1 em{font-style:normal;color:var(--brand-orange)}
+.lede{font-size:clamp(15.5px,2.2vw,18px);color:var(--ink-soft);max-width:52ch;margin:16px 0 0}
+.cta{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0}
+.btn{display:inline-flex;align-items:center;gap:7px;text-decoration:none;border:1px solid var(--line-strong);
+  background:var(--surface);border-radius:var(--r);padding:9px 14px;font-weight:600;font-size:14px}
+.btn:hover{border-color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn.primary:hover{opacity:.86}
+.btn:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+section{padding-top:46px}
+h2{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 14px;
+  display:flex;align-items:center;gap:10px}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+.big{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.big .stat:first-child{grid-column:span 1}
+.stat{border:1px solid var(--line);border-radius:var(--r);background:var(--surface);padding:14px 14px 13px;min-width:0}
+.stat span{display:block;font-size:12px;color:var(--ink-soft);line-height:1.3}
+.stat b{display:block;font-size:clamp(24px,4.6vw,34px);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin:6px 0 4px}
+.stat small{display:block;font-size:12px;color:var(--ink-soft);line-height:1.35}
+.stat.ig b{color:var(--brand-orange)}
+.stat.tt b,.stat.yt b{color:var(--brand-blue)}
+@media(max-width:620px){.big{grid-template-columns:1fr 1fr}}
+.foot{font-size:12.5px;color:var(--ink-soft);margin:10px 0 0;max-width:70ch}
+
+.reels{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px;counter-reset:r}
+@media(max-width:620px){.reels{grid-template-columns:1fr}}
+.reels a{display:flex;gap:12px;align-items:baseline;text-decoration:none;border:1px solid var(--line);border-radius:var(--r);
+  background:var(--surface);padding:13px 14px;height:100%}
+.reels a:hover{border-color:var(--ink)}
+.reels a::before{counter-increment:r;content:counter(r);font-weight:800;color:var(--brand-orange);font-size:15px;min-width:1ch}
+.reels .t{flex:1;min-width:0}
+.reels .t p{margin:0;font-weight:600;line-height:1.3;overflow-wrap:anywhere}
+.reels .t small{display:block;color:var(--ink-soft);font-size:12.5px;margin-top:3px}
+.reels .v{display:flex;flex-direction:column;align-items:flex-end;text-align:right;white-space:nowrap}
+.reels .v b{font-weight:800}
+.reels .v small{font-size:11.5px;color:var(--ink-soft);font-weight:500;margin-top:1px}
+
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.chips li{border:1px solid var(--line-strong);background:var(--surface);border-radius:20px;padding:5px 12px;font-size:13.5px;font-weight:600}
+.prizes{margin:14px 0 0;font-size:14px}
+.prizes b{color:var(--brand-orange)}
+
+.offer{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:620px){.offer{grid-template-columns:1fr}}
+.offer div{border:1px solid var(--line);border-left:3px solid var(--brand-blue);border-radius:var(--r);background:var(--surface);padding:14px 15px}
+.offer h3{margin:0 0 4px;font-size:15px;font-weight:700;letter-spacing:-.01em}
+.offer p{margin:0;color:var(--ink-soft);font-size:14px}
+
+.contact{border:1px solid var(--ink);border-radius:var(--r);background:var(--surface);padding:22px 20px}
+.contact p{margin:0 0 14px;font-size:clamp(17px,2.6vw,21px);font-weight:700;letter-spacing:-.02em;max-width:34ch;line-height:1.25}
+.contact .mail{font-size:clamp(15px,2.4vw,18px)}
+
+.state{border:1px dashed var(--line-strong);border-radius:var(--r);padding:14px;color:var(--ink-soft);font-size:14px}
+footer{margin-top:40px;font-size:12px;color:var(--ink-soft)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+.lang{margin-left:auto;display:inline-flex;border:1px solid var(--line-strong);border-radius:20px;overflow:hidden;background:var(--surface);flex:none}
+.lang button[lang="zh-Hans"]{letter-spacing:0;font-size:13px;min-width:42px}
+@media(max-width:560px){
+  .brandbar{flex-wrap:wrap}
+  .lang{margin-left:0;order:3;width:100%;justify-content:space-between;margin-top:10px}
+  .lang button{flex:1;min-width:0;padding:7px 4px}}
+.lang button{font:inherit;font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--ink-soft);background:none;border:0;
+  padding:5px 10px;cursor:pointer;min-width:38px}
+.lang button+button{border-left:1px solid var(--line)}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.lang button:hover{color:var(--ink)}
+.lang button[aria-pressed="true"]:hover{color:var(--paper)}
+.lang button:focus-visible{outline:2px solid var(--ink);outline-offset:-2px}
+
+
+.aff{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px}
+.affc{border:1px solid var(--line);border-left:3px solid var(--brand-orange);border-radius:var(--r);background:var(--surface);
+  padding:14px 15px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.affc .top{display:flex;align-items:baseline;gap:10px}
+.affc .top b{font-size:16px;font-weight:700;letter-spacing:-.01em}
+.affc .pct{margin-left:auto;font-weight:800;font-size:20px;letter-spacing:-.02em;color:var(--brand-orange);white-space:nowrap}
+.affc p{margin:0;color:var(--ink-soft);font-size:14px}
+.affc .acts{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.prof{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px}
+.prof a{display:flex;align-items:center;gap:12px;text-decoration:none;border:1px solid var(--line);border-left:3px solid var(--brand-blue);
+  border-radius:var(--r);background:var(--surface);padding:13px 15px}
+.prof a:hover{border-color:var(--ink);border-left-color:var(--brand-blue)}
+.prof .n{flex:1;min-width:0}
+.prof .n b{display:block;font-size:16px;font-weight:700;letter-spacing:-.01em}
+.prof .n small{display:block;color:var(--ink-soft);font-size:13px;margin-top:2px}
+.prof .go{font-size:13px;font-weight:600;white-space:nowrap;color:var(--ink-soft)}
+/* el primer perfil és el que ha de llegir primer una marca; els altres, a sota i més petits */
+.prof a.destacat{grid-column:1/-1;padding:16px 18px;border-left-width:4px;align-items:flex-start}
+.prof a.destacat .n b{font-size:19px}
+.prof a.destacat .n small{font-size:14px;margin-top:4px;color:var(--ink);max-width:62ch}
+.prof a.menor{border-left-color:var(--line-strong);padding:10px 13px}
+.prof a.menor .n b{font-size:14.5px;font-weight:600}
+.prof a.menor .n small{font-size:12.5px}
+.prof a.menor .go{font-size:12px}
+/* les peces: la foto mana, i a sota on te la pots baixar */
+.peces{margin:0 0 18px}
+.colgrup+.colgrup{margin-top:22px}
+.colgrup>h3{margin:0 0 3px;font-size:14px;letter-spacing:.01em}
+.colgrup>.nota{margin:0 0 11px;color:var(--ink-soft);font-size:13px;max-width:62ch}
+.graella{display:grid;grid-template-columns:1fr;gap:7px}
+.peca{display:flex;align-items:center;gap:13px;border:1px solid var(--line);border-left:3px solid var(--brand-orange);background:var(--surface);padding:9px 14px 9px 11px}
+.peca img{width:56px;height:auto;flex:none;display:block;background:var(--paper)}
+/* mentre no hi hagi foto, un marc de la mateixa mida: la fila no es desquadra */
+.peca .capfoto{width:56px;height:84px;flex:none;border:1px dashed var(--line-strong);background:var(--paper)}
+.peca .d{flex:1;min-width:0}
+.peca .d b{display:block;font-size:15px;line-height:1.2;letter-spacing:-.015em}
+.peca .on{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
+.peca .on a{font-size:11px;font-weight:600;text-decoration:none;color:var(--ink-soft);border:1px solid var(--line-strong);border-radius:20px;padding:3px 8px;white-space:nowrap}
+.peca .on a:hover{color:var(--ink);border-color:var(--ink);background:var(--paper)}
+/* al mòbil estret, la miniatura cedeix l'espai perquè els enllaços no es parteixin */
+@media(max-width:380px){
+  .peca{gap:10px;padding:8px 10px 8px 9px}
+  .peca img,.peca .capfoto{width:44px}
+  .peca .capfoto{height:66px}
+  .peca .on{gap:4px}
+  .peca .on a{padding:3px 6px}}
+.code{display:inline-flex;align-items:center;gap:8px;font:inherit;cursor:pointer;border:1px dashed var(--line-strong);
+  background:var(--paper);color:var(--ink);border-radius:var(--r);padding:7px 10px;min-width:0}
+.code b{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;letter-spacing:.04em;overflow-wrap:anywhere}
+.code span{font-size:12px;color:var(--ink-soft);white-space:nowrap}
+.code:hover{border-color:var(--ink)}
+.code:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.affc .btn{padding:7px 12px;font-size:13.5px}
+.pub{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+@media(max-width:620px){.pub{grid-template-columns:1fr}}
+.pub>div{border:1px solid var(--line);border-radius:var(--r);background:var(--surface);padding:13px 14px}
+.pub h3{margin:0 0 9px;font-size:12px;font-weight:600;color:var(--ink-soft)}
+.pub ol{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.pub li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 10px;align-items:baseline;font-size:14px}
+.pub li span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pub li b{font-weight:700;font-variant-numeric:tabular-nums}
+.pub li i{grid-column:1/-1;display:block;height:4px;border-radius:2px;background:var(--line);overflow:hidden}
+.pub li i::before{content:"";display:block;height:100%;width:var(--w);background:var(--brand-orange)}
+
+.cases{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px}
+.cases a{display:flex;flex-direction:column;gap:3px;text-decoration:none;border:1px solid var(--line);border-top:3px solid var(--brand-orange);
+  border-radius:var(--r);background:var(--surface);padding:12px 14px 13px}
+.cases a:hover{border-color:var(--ink);border-top-color:var(--brand-orange)}
+.cases .m{font-size:13px;font-weight:700;letter-spacing:.01em;color:var(--brand-orange)}
+.cases .t{font-weight:600;line-height:1.3}
+.cases .s{font-size:12.5px;color:var(--ink-soft)}
+.cases .v{margin-top:8px;font-size:clamp(22px,4vw,28px);font-weight:800;letter-spacing:-.03em;line-height:1}
+.cases .v small{display:block;font-size:12px;font-weight:500;letter-spacing:0;color:var(--ink-soft);margin-top:4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brandbar">
+    <img class="brandmark" src="icona.jpg" alt="">
+    <span class="brandname"><b>ZENKAI</b><i>3D STUDIO</i></span>
+    <div class="lang" id="lang" role="group" aria-label="Language">
+      <button type="button" data-l="en" lang="en" title="English">EN</button>
+      <button type="button" data-l="es" lang="es" title="Español">ES</button>
+      <button type="button" data-l="ca" lang="ca" title="Català">CA</button>
+      <button type="button" data-l="de" lang="de" title="Deutsch">DE</button>
+      <button type="button" data-l="pt" lang="pt" title="Português">PT</button>
+      <button type="button" data-l="zh" lang="zh-Hans" title="中文">中文</button>
+    </div>
+  </div>
+  <h1 data-h="h1"></h1>
+  <p class="lede" data-t="lede"></p>
+  <div class="cta">
+    <a class="btn primary js-mail" href="mailto:zenkai3dstudio@gmail.com" data-t="cta"></a>
+    <a class="btn" href="https://www.instagram.com/zenkai3d_studio/" target="_blank" rel="noopener">Instagram</a>
+    <a class="btn" href="https://www.tiktok.com/@zenkai3d_studio" target="_blank" rel="noopener">TikTok</a>
+    <a class="btn" href="https://www.youtube.com/@zenkai3dstudio" target="_blank" rel="noopener">YouTube</a>
+  </div>
+</header>
+
+<p class="state" id="state" hidden></p>
+
+<section id="s-num" hidden>
+  <h2 data-t="audience"></h2>
+  <div class="big" id="stats"></div>
+  <p class="foot" data-t="statsFoot"></p>
+  <div class="pub" id="pub" hidden>
+    <div><h3 data-t="byCountry"></h3><ol id="paisos"></ol></div>
+    <div><h3 data-t="byAge"></h3><ol id="edats"></ol></div>
+  </div>
+</section>
+
+<section id="s-cases" hidden>
+  <h2 data-t="cases"></h2>
+  <div class="cases" id="cases"></div>
+</section>
+
+<section id="s-top" hidden>
+  <h2 data-t="top"></h2>
+  <ol class="reels" id="top"></ol>
+</section>
+
+<section id="s-prof" hidden>
+  <h2 data-t="models"></h2>
+  <p class="foot" style="margin:0 0 12px" data-t="modelsHint"></p>
+  <div class="peces" id="peces"></div>
+  <div class="prof" id="prof"></div>
+</section>
+
+<section id="s-brands" hidden>
+  <h2 data-t="brands"></h2>
+  <ul class="chips" id="brands"></ul>
+  <p class="prizes" id="prizes" hidden></p>
+</section>
+
+<section id="s-aff" hidden>
+  <h2 data-t="codes"></h2>
+  <p class="foot" style="margin:0 0 12px" data-t="codesHint"></p>
+  <div class="aff" id="aff"></div>
+</section>
+
+<section>
+  <h2 data-t="collab"></h2>
+  <div class="offer">
+    <div><h3 data-t="o1t"></h3><p data-t="o1"></p></div>
+    <div><h3 data-t="o2t"></h3><p data-t="o2"></p></div>
+    <div><h3 data-t="o3t"></h3><p data-t="o3"></p></div>
+    <div><h3 data-t="o4t"></h3><p data-t="o4"></p></div>
+  </div>
+</section>
+
+<section>
+  <h2 data-t="contact"></h2>
+  <div class="contact">
+    <p data-t="contactLine"></p>
+    <a class="btn primary mail js-mail" href="mailto:zenkai3dstudio@gmail.com">zenkai3dstudio@gmail.com</a>
+  </div>
+</section>
+
+<footer><span data-t="footer"></span> <span id="upd"></span></footer>
+</div>
+
+<script>
+"use strict";
+var MAIL = "zenkai3dstudio@gmail.com";
+var T = {
+  en: {
+    title: "Zenkai3D Studio · Media kit",
+    h1: "Pop-culture figures, <em>printed and painted</em> on camera.",
+    lede: "Short vertical videos that take a 3D print from the build plate to a finished, painted piece. Anime, games and film, mostly.",
+    cta: "Work with me", subject: "Collaboration with Zenkai3D Studio",
+    state: "The numbers are being refreshed. Try again in a minute, or write to " + MAIL + " and I'll send them over.",
+    audience: "Audience", top: "Top reels, last 12 months", brands: "Brands I've worked with",
+    prizes: "Prize winner in <b>{n}</b> 3D printing and design contests.",
+    codes: "Discount codes", codesHint: "Shops I buy from myself. Ordering through these links gets you the discount and supports the channel.",
+    copy: "Copy code", copied: "Copied", shop: "Go to the shop",
+    off: function (p, first) { return p + "% off" + (first ? " your first order" : ""); },
+    collab: "What a collaboration looks like",
+    o1t: "Your material in a real build", o1: "Filament or resin used on a full figure, from slicing to paint, with the material named in the video and the caption.",
+    o2t: "New machines, put to work", o2: "Unboxing, setup and first prints of a printer or accessory, filmed in the studio.",
+    o3t: "One video, three networks", o3: "Reels also go out on TikTok and as YouTube Shorts.",
+    o4t: "Codes and links", o4: "Discount or affiliate codes in the caption and the bio link.",
+    contact: "Contact", contactLine: "Have a material, a machine or a model you'd like to see printed? Send me a line.",
+    footer: "Figures refresh every Monday from Instagram, TikTok and YouTube data.", upd: "Last update: {d}.",
+    igF: "Instagram followers", views12: "Views in the last 12 months", reelsN: "{n} reels",
+    medV: "Median views per reel", medR: "Median reach {n}",
+    eng: "Engagement rate", engS: "Likes, comments, shares and saves over reach",
+    shares: "Shares per reel", avg: "Average",
+    ttF: "TikTok followers", ttMed: "Median {n} views per video",
+    ytS: "YouTube subscribers", ytSh: "YouTube Shorts", shortsN: "{n} Shorts",
+    statsFoot: "Medians, engagement and shares cover reels posted between one week and three months ago, so a very new or very old post doesn't skew them.",
+    models: "My models", modelsHint: "I also design figures and publish them for others to print.", nModels: "{n} models", nFollowers: "{n} followers", nLikes: "{n} likes", profile: "See profile",
+    byCountry: "Followers by country", byAge: "Followers by age", cases: "Brand collaborations", watch: "views",
+    viewsW: "views"
+  },
+  es: {
+    title: "Zenkai3D Studio · Media kit",
+    h1: "Figuras de la cultura pop, <em>impresas y pintadas</em> frente a la cámara.",
+    lede: "Vídeos verticales cortos que llevan una impresión 3D de la placa a la pieza terminada y pintada. Sobre todo anime, videojuegos y cine.",
+    cta: "Trabajemos juntos", subject: "Colaboración con Zenkai3D Studio",
+    state: "Las cifras se están actualizando. Vuelve a probar en un minuto o escribe a " + MAIL + " y te las envío.",
+    audience: "Audiencia", top: "Los mejores reels de los últimos 12 meses", brands: "Marcas con las que he trabajado",
+    prizes: "Premiado en <b>{n}</b> concursos de impresión y diseño 3D.",
+    codes: "Códigos de descuento", codesHint: "Tiendas en las que compro yo mismo. Si pides desde estos enlaces, tienes el descuento y apoyas el canal.",
+    copy: "Copiar código", copied: "Copiado", shop: "Ir a la tienda",
+    off: function (p, first) { return p + " % de descuento" + (first ? " en tu primer pedido" : ""); },
+    collab: "Cómo es una colaboración",
+    o1t: "Tu material en una figura de verdad", o1: "Filamento o resina en una figura completa, del laminado a la pintura, con el material citado en el vídeo y en el texto.",
+    o2t: "Máquinas nuevas, a pleno rendimiento", o2: "Unboxing, puesta a punto y primeras impresiones de una impresora o un accesorio, grabado en el taller.",
+    o3t: "Un vídeo, tres redes", o3: "Los reels también se publican en TikTok y como YouTube Shorts.",
+    o4t: "Códigos y enlaces", o4: "Códigos de descuento o de afiliado en el texto y en el enlace de la bio.",
+    contact: "Contacto", contactLine: "¿Tienes un material, una máquina o un modelo que quieras ver impreso? Escríbeme.",
+    footer: "Las cifras se actualizan cada lunes con datos de Instagram, TikTok y YouTube.", upd: "Última actualización: {d}.",
+    igF: "Seguidores en Instagram", views12: "Visualizaciones en 12 meses", reelsN: "{n} reels",
+    medV: "Mediana de visualizaciones por reel", medR: "Mediana de alcance: {n}",
+    eng: "Tasa de interacción", engS: "Me gusta, comentarios, compartidos y guardados sobre el alcance",
+    shares: "Compartidos por reel", avg: "Media",
+    ttF: "Seguidores en TikTok", ttMed: "Mediana de {n} visualizaciones por vídeo",
+    ytS: "Suscriptores en YouTube", ytSh: "Shorts en YouTube", shortsN: "{n} Shorts",
+    statsFoot: "Las medianas, la interacción y los compartidos son de los reels publicados hace entre una semana y tres meses, para que uno muy nuevo o muy antiguo no las distorsione.",
+    models: "Mis modelos", modelsHint: "También diseño figuras y las publico para que otros las impriman.", nModels: "{n} modelos", nFollowers: "{n} seguidores", nLikes: "{n} me gusta", profile: "Ver perfil",
+    byCountry: "Seguidores por país", byAge: "Seguidores por edad", cases: "Colaboraciones con marcas", watch: "visualizaciones",
+    viewsW: "visualizaciones"
+  },
+  ca: {
+    title: "Zenkai3D Studio · Dossier",
+    h1: "Figures de la cultura pop, <em>impreses i pintades</em> davant la càmera.",
+    lede: "Vídeos verticals curts que porten una impressió 3D de la placa a la peça acabada i pintada. Sobretot anime, videojocs i cinema.",
+    cta: "Treballem junts", subject: "Col·laboració amb Zenkai3D Studio",
+    state: "Les xifres s'estan actualitzant. Torna-ho a provar d'aquí a un minut o escriu a " + MAIL + " i te les envio.",
+    audience: "Audiència", top: "Els millors reels dels últims 12 mesos", brands: "Marques amb què he treballat",
+    prizes: "Premiat en <b>{n}</b> concursos d'impressió i disseny 3D.",
+    codes: "Codis de descompte", codesHint: "Botigues on compro jo mateix. Si compres des d'aquests enllaços, tens el descompte i dones suport al canal.",
+    copy: "Copia el codi", copied: "Copiat", shop: "Ves a la botiga",
+    off: function (p, first) { return p + " % de descompte" + (first ? " a la primera comanda" : ""); },
+    collab: "Com és una col·laboració",
+    o1t: "El teu material en una figura de debò", o1: "Filament o resina en una figura sencera, del laminat a la pintura, amb el material citat al vídeo i al text.",
+    o2t: "Màquines noves, a ple rendiment", o2: "Desembalatge, posada a punt i primeres impressions d'una impressora o un accessori, gravat al taller.",
+    o3t: "Un vídeo, tres xarxes", o3: "Els reels també surten a TikTok i com a YouTube Shorts.",
+    o4t: "Codis i enllaços", o4: "Codis de descompte o d'afiliat al text i a l'enllaç de la bio.",
+    contact: "Contacte", contactLine: "Tens un material, una màquina o un model que vulguis veure imprès? Escriu-me.",
+    footer: "Les xifres s'actualitzen cada dilluns amb dades d'Instagram, TikTok i YouTube.", upd: "Última actualització: {d}.",
+    igF: "Seguidors a Instagram", views12: "Visualitzacions en 12 mesos", reelsN: "{n} reels",
+    medV: "Mediana de visualitzacions per reel", medR: "Mediana d'abast: {n}",
+    eng: "Taxa d'interacció", engS: "M'agrada, comentaris, compartits i desats sobre l'abast",
+    shares: "Compartits per reel", avg: "Mitjana",
+    ttF: "Seguidors a TikTok", ttMed: "Mediana de {n} visualitzacions per vídeo",
+    ytS: "Subscriptors a YouTube", ytSh: "Shorts a YouTube", shortsN: "{n} Shorts",
+    statsFoot: "Les medianes, la interacció i els compartits són dels reels publicats fa entre una setmana i tres mesos, perquè un de molt nou o de molt antic no les distorsioni.",
+    models: "Els meus models", modelsHint: "També dissenyo figures i les publico perquè altres les imprimeixin.", nModels: "{n} models", nFollowers: "{n} seguidors", nLikes: "{n} m'agrada", profile: "Mira el perfil",
+    byCountry: "Seguidors per país", byAge: "Seguidors per edat", cases: "Col·laboracions amb marques", watch: "visualitzacions",
+    viewsW: "visualitzacions"
+  },
+  pt: {
+    title: "Zenkai3D Studio · Mídia kit",
+    h1: "Figuras de cultura pop, <em>impressas e pintadas</em> em vídeo.",
+    lede: "Vídeos verticais curtos que levam uma impressão 3D da mesa de impressão até a peça pintada e pronta. Sobretudo anime, jogos e cinema.",
+    cta: "Vamos trabalhar juntos", subject: "Colaboração com o Zenkai3D Studio",
+    state: "Os números estão sendo atualizados. Tente daqui a um minuto ou escreva para " + MAIL + " que eu mando na hora.",
+    audience: "Audiência", top: "Reels em destaque, últimos 12 meses", brands: "Marcas com que já trabalhei",
+    prizes: "Premiado em <b>{n}</b> concursos de impressão 3D e de design.",
+    codes: "Códigos de desconto", codesHint: "Lojas onde eu mesmo compro. Comprar por estes links garante o desconto e ajuda o canal.",
+    copy: "Copiar código", copied: "Copiado", shop: "Ir à loja",
+    off: function (p, first) { return p + " % de desconto" + (first ? " no primeiro pedido" : ""); },
+    collab: "Como é uma colaboração",
+    o1t: "Seu material numa peça de verdade", o1: "Filamento ou resina usados numa figura completa, do fatiamento à pintura, com o material citado no vídeo e na legenda.",
+    o2t: "Máquinas novas, colocadas para trabalhar", o2: "Unboxing, montagem e primeiras impressões de uma impressora ou acessório, filmados no estúdio.",
+    o3t: "Um vídeo, três redes", o3: "Os reels saem também no TikTok e como YouTube Shorts.",
+    o4t: "Códigos e links", o4: "Códigos de desconto ou de afiliado na legenda e no link da bio.",
+    contact: "Contato", contactLine: "Tem um material, uma máquina ou um modelo que gostaria de ver impresso? Me escreva.",
+    footer: "Os números são atualizados todas as segundas-feiras com dados do Instagram, do TikTok e do YouTube.", upd: "Última atualização: {d}.",
+    igF: "Seguidores no Instagram", views12: "Visualizações nos últimos 12 meses", reelsN: "{n} reels",
+    medV: "Mediana de visualizações por reel", medR: "Mediana de alcance {n}",
+    eng: "Taxa de interação", engS: "Curtidas, comentários, compartilhamentos e salvamentos sobre o alcance",
+    shares: "Compartilhamentos por reel", avg: "Média",
+    ttF: "Seguidores no TikTok", ttMed: "Mediana de {n} visualizações por vídeo",
+    ytS: "Inscritos no YouTube", ytSh: "YouTube Shorts", shortsN: "{n} Shorts",
+    statsFoot: "As medianas, a interação e os compartilhamentos cobrem reels publicados entre uma semana e três meses atrás, para que uma publicação muito nova ou muito antiga não distorça os números.",
+    models: "Meus modelos", modelsHint: "Também modelo figuras e publico para outras pessoas imprimirem.", nModels: "{n} modelos", nFollowers: "{n} seguidores", nLikes: "{n} curtidas", profile: "Ver perfil",
+    byCountry: "Seguidores por país", byAge: "Seguidores por idade", cases: "Colaborações com marcas", watch: "visualizações",
+    viewsW: "visualizações"
+  },
+  zh: {
+    title: "Zenkai3D Studio · 媒体资料",
+    h1: "流行文化手办，<em>现场打印与上色</em>。",
+    lede: "竖屏短视频，把一件 3D 打印作品从热床一路做到上色完成的成品。题材以动漫、游戏和电影为主。",
+    cta: "合作洽谈", subject: "与 Zenkai3D Studio 合作",
+    state: "数据正在更新。请过一分钟再试，或者写信到 " + MAIL + "，我直接发给你。",
+    audience: "受众", top: "近 12 个月的热门视频", brands: "合作过的品牌",
+    prizes: "在 <b>{n}</b> 项 3D 打印与设计比赛中获奖。",
+    codes: "优惠码", codesHint: "我自己也在这些店买东西。通过这些链接下单，你能拿到折扣，也等于支持这个频道。",
+    copy: "复制优惠码", copied: "已复制", shop: "前往店铺",
+    off: function (p, first) { return (first ? "首单" : "") + "立减 " + p + "%"; },
+    collab: "合作方式",
+    o1t: "你的材料，用在真实作品上", o1: "线材或光敏树脂用在一件完整的手办上，从切片到上色，视频中和文案中都会写明材料名称。",
+    o2t: "新机器，真正上手", o2: "打印机或配件的开箱、组装和首件打印，在工作室实拍。",
+    o3t: "一条视频，三个平台", o3: "Reels 会同步发布到 TikTok 和 YouTube Shorts。",
+    o4t: "优惠码与链接", o4: "优惠码或联盟链接放在文案里和主页链接里。",
+    contact: "联系方式", contactLine: "有材料、机器或模型想看它被打印出来吗？给我留言。",
+    footer: "数据每周一根据 Instagram、TikTok 和 YouTube 的后台更新。", upd: "最近更新：{d}。",
+    igF: "Instagram 粉丝", views12: "近 12 个月播放量", reelsN: "{n} 条视频",
+    medV: "每条视频播放量中位数", medR: "触达中位数 {n}",
+    eng: "互动率", engS: "点赞、评论、分享和收藏除以触达",
+    shares: "每条视频分享数", avg: "平均",
+    ttF: "TikTok 粉丝", ttMed: "每条视频播放量中位数 {n}",
+    ytS: "YouTube 订阅", ytSh: "YouTube Shorts", shortsN: "{n} 条 Shorts",
+    statsFoot: "中位数、互动率和分享数统计的是一周前到三个月前发布的视频，这样太新或太旧的内容不会影响结果。",
+    models: "我的模型", modelsHint: "我也自己设计手办，并发布出来供别人打印。", nModels: "{n} 个模型", nFollowers: "{n} 位关注者", nLikes: "{n} 个赞", profile: "查看主页",
+    byCountry: "粉丝国家分布", byAge: "粉丝年龄分布", cases: "品牌合作", watch: "次播放",
+    viewsW: "次播放"
+  },
+  de: {
+    title: "Zenkai3D Studio · Mediakit",
+    h1: "Popkultur-Figuren, <em>gedruckt und bemalt</em> vor der Kamera.",
+    lede: "Kurze Hochkant-Videos, die einen 3D-Druck von der Druckplatte bis zur fertig bemalten Figur zeigen. Vor allem Anime, Games und Film.",
+    cta: "Zusammenarbeit anfragen", subject: "Zusammenarbeit mit Zenkai3D Studio",
+    state: "Die Zahlen werden gerade aktualisiert. Versuchen Sie es in einer Minute erneut oder schreiben Sie an " + MAIL + ", dann schicke ich sie Ihnen.",
+    audience: "Reichweite", top: "Top-Reels der letzten 12 Monate", brands: "Marken, mit denen ich gearbeitet habe",
+    prizes: "Preisträger in <b>{n}</b> Wettbewerben für 3D-Druck und 3D-Design.",
+    codes: "Rabattcodes", codesHint: "Shops, in denen ich selbst einkaufe. Wer über diese Links bestellt, bekommt den Rabatt und unterstützt den Kanal.",
+    copy: "Code kopieren", copied: "Kopiert", shop: "Zum Shop",
+    off: function (p, first) { return p + " % Rabatt" + (first ? " auf die erste Bestellung" : ""); },
+    collab: "So sieht eine Zusammenarbeit aus",
+    o1t: "Ihr Material in einem echten Projekt", o1: "Filament oder Harz für eine komplette Figur, vom Slicen bis zur Bemalung, mit Nennung des Materials im Video und in der Beschreibung.",
+    o2t: "Neue Geräte im Praxiseinsatz", o2: "Unboxing, Einrichtung und erste Drucke eines Druckers oder Zubehörs, gefilmt im Studio.",
+    o3t: "Ein Video, drei Netzwerke", o3: "Die Reels erscheinen auch auf TikTok und als YouTube Shorts.",
+    o4t: "Codes und Links", o4: "Rabatt- oder Affiliate-Codes in der Beschreibung und im Bio-Link.",
+    contact: "Kontakt", contactLine: "Sie haben ein Material, ein Gerät oder ein Modell, das Sie gedruckt sehen möchten? Schreiben Sie mir.",
+    footer: "Die Zahlen werden jeden Montag mit Daten von Instagram, TikTok und YouTube aktualisiert.", upd: "Letzte Aktualisierung: {d}.",
+    igF: "Instagram-Follower", views12: "Aufrufe in 12 Monaten", reelsN: "{n} Reels",
+    medV: "Median der Aufrufe pro Reel", medR: "Median-Reichweite: {n}",
+    eng: "Interaktionsrate", engS: "Likes, Kommentare, Shares und Saves im Verhältnis zur Reichweite",
+    shares: "Shares pro Reel", avg: "Durchschnitt",
+    ttF: "TikTok-Follower", ttMed: "Median {n} Aufrufe pro Video",
+    ytS: "YouTube-Abonnenten", ytSh: "YouTube Shorts", shortsN: "{n} Shorts",
+    statsFoot: "Mediane, Interaktionen und Shares beziehen sich auf Reels, die vor einer Woche bis drei Monaten veröffentlicht wurden, damit sehr neue oder sehr alte Beiträge sie nicht verzerren.",
+    models: "Meine Modelle", modelsHint: "Ich entwerfe auch Figuren und veröffentliche sie, damit andere sie drucken können.", nModels: "{n} Modelle", nFollowers: "{n} Follower", nLikes: "{n} Likes", profile: "Profil ansehen",
+    byCountry: "Follower nach Land", byAge: "Follower nach Alter", cases: "Markenkooperationen", watch: "Aufrufe",
+    viewsW: "Aufrufe"
+  }
+};
+var LOC = { en: "en-GB", es: "es-ES", ca: "ca-ES", de: "de-DE", pt: "pt-BR", zh: "zh-CN" };
+var LANGS = ["en", "es", "ca", "de", "pt", "zh"], KEY = "zenkai_dossier_lang";
+var $ = function (id) { return document.getElementById(id); };
+var esc = function (t) { return String(t == null ? "" : t).replace(/[&<>"]/g, function (c) {
+  return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+var L = "en", D = null, C = null;
+
+function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+function triaIdioma() {
+  var q = (new URLSearchParams(location.search).get("lang") || "").toLowerCase();
+  if (LANGS.indexOf(q) >= 0) return q;
+  var s = lsGet(KEY); if (LANGS.indexOf(s) >= 0) return s;
+  var nav = (navigator.languages || [navigator.language || ""]);
+  for (var i = 0; i < nav.length; i++) { var c = String(nav[i]).slice(0, 2).toLowerCase(); if (LANGS.indexOf(c) >= 0) return c; }
+  return "en";
+}
+function t(k, vars) {
+  var s = (T[L] && T[L][k] != null) ? T[L][k] : T.en[k];
+  if (vars) Object.keys(vars).forEach(function (v) { s = String(s).split("{" + v + "}").join(vars[v]); });
+  return s;
+}
+function nf() {
+  try { return new Intl.NumberFormat(LOC[L], { useGrouping: "always" }); } catch (e) { return new Intl.NumberFormat(LOC[L]); }
+}
+function num(x) { return (x == null || x === "") ? null : nf().format(x); }
+function compact(x) {
+  if (x == null) return null;
+  if (L === "en" && x >= 1e4) return (x >= 1e6 ? (Math.round(x / 1e5) / 10) + "M" : Math.round(x / 1e3) + "K");
+  if (x >= 1e4) return nf().format(Math.round(x / 1e3) * 1e3);
+  return nf().format(x);
+}
+function dia(iso) {
+  if (!iso) return "";
+  var d = new Date(iso + "T12:00:00");
+  return isNaN(d) ? iso : d.toLocaleDateString(LOC[L], { day: "numeric", month: "short", year: "numeric" });
+}
+function stat(cls, label, value, small) {
+  if (value == null) return "";
+  return '<div class="stat ' + cls + '"><span>' + esc(label) + '</span><b>' + esc(value) + '</b>' + (small ? '<small>' + esc(small) + '</small>' : '') + '</div>';
+}
+
+function textos() {
+  document.documentElement.lang = L;
+  document.title = t("title");
+  Array.prototype.forEach.call(document.querySelectorAll("[data-t]"), function (el) { el.textContent = t(el.dataset.t); });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-h]"), function (el) { el.innerHTML = t(el.dataset.h); });
+  Array.prototype.forEach.call(document.querySelectorAll(".js-mail"), function (a) {
+    a.href = "mailto:" + MAIL + "?subject=" + encodeURIComponent(t("subject"));
+  });
+  Array.prototype.forEach.call($("lang").querySelectorAll("button"), function (b) {
+    b.setAttribute("aria-pressed", String(b.dataset.l === L));
+  });
+  $("state").textContent = t("state");
+}
+
+function pinta() {
+  if (!D) return;
+  var ig = D.instagram || {}, tk = D.tiktok || {}, yt = D.youtube || {};
+  $("upd").textContent = D.actualitzat ? t("upd", { d: dia(D.actualitzat) }) : "";
+
+  var h = "";
+  h += stat("ig", t("igF"), num(ig.seguidors), ig.usuari ? "@" + ig.usuari : "");
+  h += stat("ig", t("views12"), compact(ig.vistes_12m), ig.reels_12m ? t("reelsN", { n: ig.reels_12m }) : "");
+  h += stat("ig", t("medV"), num(ig.mediana_vistes), ig.mediana_abast ? t("medR", { n: num(ig.mediana_abast) }) : "");
+  h += stat("ig", t("eng"), ig.interaccio_pct != null ? nf().format(ig.interaccio_pct) + (L === "en" ? "%" : " %") : null, t("engS"));
+  h += stat("ig", t("shares"), ig.compartits_mitjana != null ? nf().format(ig.compartits_mitjana) : null, t("avg"));
+  h += stat("tt", t("ttF"), num(tk.seguidors), tk.mediana_vistes ? t("ttMed", { n: num(tk.mediana_vistes) }) : "");
+  if (yt.subscriptors) {
+    h += stat("yt", yt.subscriptors ? t("ytS") : t("ytSh"), num(yt.subscriptors || yt.shorts),
+      yt.subscriptors && yt.shorts ? t("shortsN", { n: yt.shorts }) : "");
+  }
+  $("stats").innerHTML = h;
+  $("s-num").hidden = !h;
+
+  var top = D.top || [];
+  $("top").innerHTML = top.map(function (r) {
+    return '<li><a href="' + esc(r.url) + '" target="_blank" rel="noopener"><span class="t"><p>' + esc(r.titol) + '</p><small>' + esc(dia(r.data)) + '</small></span>' +
+      '<span class="v"><b>' + esc(num(r.vistes)) + '</b><small>' + esc(t("viewsW")) + '</small></span></a></li>';
+  }).join("");
+  $("s-top").hidden = !top.length;
+
+  var P = D.public || {}, pc = (L === "en" ? "%" : " %");
+  var noms = null;
+  try { noms = new Intl.DisplayNames([LOC[L]], { type: "region" }); } catch (e) {}
+  function barres(llista, nom) {
+    var max = llista.length ? llista[0][1] : 1;
+    return llista.map(function (x) {
+      return '<li><span>' + esc(nom(x[0])) + '</span><b>' + esc(x[1] + pc) + '</b><i style="--w:' + Math.round(x[1] * 100 / max) + '%"></i></li>';
+    }).join("");
+  }
+  var ps = (P.paisos || []).slice(0, 5), ed = (P.edats || []).filter(function (x) { return x[1] >= 1; }).slice(0, 4);
+  $("paisos").innerHTML = barres(ps, function (c) { try { return (noms && noms.of(c)) || c; } catch (e) { return c; } });
+  $("edats").innerHTML = barres(ed, function (a) { return String(a).replace("-", "–"); });
+  $("pub").hidden = !ps.length && !ed.length;
+
+  var cs = ((C && C.colaboracions) || []).filter(function (c) { return c && c.codi; });
+  var vs = D.vistes || {};
+  $("cases").innerHTML = cs.map(function (c) {
+    var tit = (c.titol && typeof c.titol === "object") ? (c.titol[L] || c.titol.en) : c.titol;
+    var v = vs[c.codi];
+    return '<a href="https://www.instagram.com/reel/' + encodeURIComponent(c.codi) + '/" target="_blank" rel="noopener">' +
+      '<span class="m">' + esc(c.marca) + '</span><span class="t">' + esc(tit || "") + '</span>' +
+      (c.material ? '<span class="s">' + esc(c.material) + '</span>' : '') +
+      (v ? '<span class="v">' + esc(num(v)) + '<small>' + esc(t("watch")) + '</small></span>' : '') + '</a>';
+  }).join("");
+  $("s-cases").hidden = !cs.length;
+
+  var br = (C && C.marques) || [];
+  $("brands").innerHTML = br.map(function (m) { return "<li>" + esc(m) + "</li>"; }).join("");
+  if (D.premis) { $("prizes").innerHTML = t("prizes", { n: esc(D.premis) }); }
+  $("prizes").hidden = !D.premis;
+  $("s-brands").hidden = !br.length && !D.premis;
+}
+
+function curt(x) {
+  if (x == null) return null;
+  if (L === "en" && x >= 1000) return (x >= 1e4 ? Math.round(x / 1e3) : Math.round(x / 100) / 10) + "K";
+  return nf().format(x);
+}
+function notaColleccio(nom) {
+  var cols = (C && C.colleccions) || [];
+  for (var i = 0; i < cols.length; i++) {
+    if (cols[i] && cols[i].nom === nom) return cols[i].nota ? (cols[i].nota[L] || cols[i].nota.en || "") : "";
+  }
+  return "";
+}
+function pintaPeces() {
+  var pc = ((C && C.peces) || []).filter(function (p) { return p && p.nom; });
+  // agrupades per col·lecció, en l'ordre en què hi surt la primera figura de cada una.
+  // Les que no en porten cap van juntes en un grup sense títol.
+  var ordre = [], grups = {};
+  pc.forEach(function (p) {
+    var k = p.colleccio || "";
+    if (!grups[k]) { grups[k] = []; ordre.push(k); }
+    grups[k].push(p);
+  });
+  $("peces").innerHTML = ordre.map(function (k) {
+    var nota = k ? notaColleccio(k) : "";
+    return '<div class="colgrup">' +
+      (k ? '<h3>' + esc(k) + '</h3>' : "") +
+      (nota ? '<p class="nota">' + esc(nota) + '</p>' : "") +
+      '<div class="graella">' + grups[k].map(function (p) {
+        var on = (p.enllacos || []).filter(function (e) { return e && e.on && e.url; });
+        return '<div class="peca">' +
+          (p.foto ? '<img src="' + esc(p.foto) + '" alt="' + esc(p.nom) + '" loading="lazy">'
+                  : '<div class="capfoto" aria-hidden="true"></div>') +
+          '<div class="d"><b>' + esc(p.nom) + '</b>' +
+          (on.length ? '<div class="on">' + on.map(function (e) {
+            return '<a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + esc(e.on) + '</a>';
+          }).join("") + '</div>' : "") +
+          "</div></div>";
+      }).join("") + '</div></div>';
+  }).join("");
+  return pc.length;
+}
+function pintaPerfils() {
+  var pf = ((C && C.perfils) || []).filter(function (p) { return p && p.nom && p.url; });
+  // fora del && : amb perfils a la llista, el curtcircuit no arribaria mai a pintar les peces
+  var np = pintaPeces();
+  $("s-prof").hidden = !pf.length && !np;
+  $("prof").innerHTML = pf.map(function (p, i) {
+    var dades = [];
+    if (p.models) dades.push(t("nModels", { n: curt(p.models) }));
+    if (p.seguidors) dades.push(t("nFollowers", { n: curt(p.seguidors) }));
+    if (p.m_agrada) dades.push(t("nLikes", { n: curt(p.m_agrada) }));
+    var nota = p.nota ? (p.nota[L] || p.nota.en || "") : "";
+    var sota = dades.join(" · ");
+    if (nota) sota = sota ? nota + " · " + sota : nota;
+    return '<a class="' + (i ? "menor" : "destacat") + '" href="' + esc(p.url) + '" target="_blank" rel="noopener">' +
+      '<span class="n"><b>' + esc(p.nom) + '</b>' +
+      (sota ? '<small>' + esc(sota) + '</small>' : '') + '</span>' +
+      '<span class="go">' + esc(t("profile")) + ' ↗</span></a>';
+  }).join("");
+}
+function pintaAfiliats() {
+  var af = ((C && C.afiliats) || []).filter(function (a) { return a && a.marca && a.url; });
+  $("s-aff").hidden = !af.length;
+  $("aff").innerHTML = af.map(function (a, i) {
+    var desc = a.pct ? t("off")(a.pct, !!a.primera) : "";
+    var nota = a.nota ? (a.nota[L] || a.nota.en || "") : "";
+    return '<div class="affc"><div class="top"><b>' + esc(a.marca) + '</b>' +
+      (a.pct ? '<span class="pct">−' + esc(a.pct) + (L === "en" ? "%" : " %") + '</span>' : '') + '</div>' +
+      ((desc || nota) ? '<p>' + esc([desc, nota].filter(Boolean).join(". ")) + '</p>' : '') +
+      '<div class="acts">' +
+      (a.codi ? '<button type="button" class="code" data-i="' + i + '"><b>' + esc(a.codi) + '</b><span>' + esc(t("copy")) + '</span></button>' : '') +
+      '<a class="btn primary" href="' + esc(a.url) + '" target="_blank" rel="noopener sponsored">' + esc(t("shop")) + ' ↗</a>' +
+      '</div></div>';
+  }).join("");
+  Array.prototype.forEach.call($("aff").querySelectorAll(".code"), function (b) {
+    b.onclick = function () {
+      var codi = af[+b.dataset.i].codi, sp = b.querySelector("span");
+      var fet = function () { sp.textContent = t("copied"); setTimeout(function () { sp.textContent = t("copy"); }, 1600); };
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(codi).then(fet, function () { copiaVell(codi); fet(); }); }
+        else { copiaVell(codi); fet(); }
+      } catch (e) { copiaVell(codi); fet(); }
+    };
+  });
+}
+function copiaVell(s) {
+  try {
+    var ta = document.createElement("textarea"); ta.value = s; ta.setAttribute("readonly", "");
+    ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.appendChild(ta); ta.select();
+    document.execCommand("copy"); document.body.removeChild(ta);
+  } catch (e) {}
+}
+
+function canvia(l) {
+  if (LANGS.indexOf(l) < 0) return;
+  L = l; lsSet(KEY, l);
+  textos(); pinta(); pintaPerfils(); pintaAfiliats();
+}
+Array.prototype.forEach.call($("lang").querySelectorAll("button"), function (b) {
+  b.onclick = function () { canvia(b.dataset.l); };
+});
+
+L = triaIdioma();
+textos();
+function json(u) {
+  return fetch(u + "?t=" + Date.now(), { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); });
+}
+/* El comptador de visites. El codi del compte surt de dossier-config.json: mentre
+   no n'hi hagi, no es carrega res. GoatCounter no posa galetes ni recull dades
+   personals, així que la pàgina no necessita cap avís de cookies. */
+function comptador() {
+  var c = (C && C.analitica && C.analitica.goatcounter) || "";
+  if (!c || !/^[a-z0-9-]{1,40}$/.test(c)) return;
+  var s = document.createElement("script");
+  s.async = true;
+  s.src = "https://gc.zgo.at/count.js";
+  s.setAttribute("data-goatcounter", "https://" + c + ".goatcounter.com/count");
+  document.head.appendChild(s);
+}
+
+json("dossier-config.json").then(function (c) { C = c; }, function () { C = null; }).then(function () {
+  comptador();
+  pintaPerfils(); pintaAfiliats();
+  return json("dossier.json").then(function (d) {
+    D = d;
+    pinta();
+  });
+}).catch(function () { $("state").hidden = false; });
+</script>
+</body>
+</html>
