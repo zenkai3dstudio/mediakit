@@ -13,7 +13,7 @@
 <link rel="apple-touch-icon" href="icona.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#F2F2F0; --surface:#FFFFFF; --ink:#191A1C; --ink-soft:#6B6D72;
@@ -32,7 +32,7 @@
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
-body{background:var(--paper);color:var(--ink);font-family:"Archivo","Helvetica Neue",Arial,sans-serif;
+body{background:var(--paper);color:var(--ink);font-family:"Manrope","Avenir Next","Segoe UI Variable",system-ui,sans-serif;
   font-size:15px;line-height:1.5;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
 [hidden]{display:none!important}
 a{color:inherit}
@@ -192,6 +192,87 @@ footer{margin-top:40px;font-size:12px;color:var(--ink-soft)}
 .cases .s{font-size:12.5px;color:var(--ink-soft)}
 .cases .v{margin-top:8px;font-size:clamp(22px,4vw,28px);font-weight:800;letter-spacing:-.03em;line-height:1}
 .cases .v small{display:block;font-size:12px;font-weight:500;letter-spacing:0;color:var(--ink-soft);margin-top:4px}
+
+/* ---------- Estil «link in bio»: columna centrada, quadrícula suau, píndoles i títols en monoespai.
+   Mateixos colors de sempre (paper, ink, taronja i blau de marca). ---------- */
+:root{--r:16px;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--grid:rgba(25,26,28,.055);--glow:rgba(230,115,36,.10)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--grid:rgba(255,255,255,.045);--glow:rgba(230,115,36,.13)}}
+:root[data-theme="dark"]{--grid:rgba(255,255,255,.045);--glow:rgba(230,115,36,.13)}
+body{min-height:100vh;
+  background-color:var(--paper);
+  background-image:radial-gradient(760px 460px at 50% 0,var(--glow),transparent 72%),
+    linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:auto,42px 42px,42px 42px;background-position:0 0,center top,center top}
+.wrap{max-width:720px;padding:0 18px 64px}
+
+header{position:relative;padding:58px 0 4px;text-align:center}
+.brandbar{flex-direction:column;justify-content:center;gap:12px}
+.brandmark{width:88px;height:88px;border-radius:50%;box-shadow:0 0 0 1px var(--line-strong),0 0 0 6px var(--paper),0 0 0 7px var(--line),0 14px 34px -10px var(--glow)}
+.brandname{font-size:22px;font-weight:800;letter-spacing:-.02em;text-transform:none}
+.lang{position:absolute;top:14px;right:0;margin:0;order:0;border-radius:999px;background:transparent}
+@media(max-width:560px){
+  .lang{position:static;order:-1;width:auto;margin:0 auto 18px;justify-content:center}
+  .lang button{flex:none;padding:6px 10px}
+  header{padding-top:22px}}
+h1{font-size:clamp(23px,5.4vw,34px);letter-spacing:-.03em;line-height:1.08;margin:18px auto 0;max-width:20ch}
+.lede{margin:12px auto 0;font-size:clamp(14.5px,2vw,16px);max-width:46ch}
+.cta{justify-content:center;margin:20px 0 0}
+.btn{border-radius:999px;padding:8px 16px;font-size:13.5px;background:color-mix(in srgb,var(--surface) 70%,transparent);border-color:var(--line-strong)}
+.btn.primary{background:var(--brand-orange);border-color:var(--brand-orange);color:#fff}
+.btn.primary:hover{opacity:1;filter:brightness(1.07)}
+
+.jump{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:22px 0 0}
+.jump a{font-size:13px;font-weight:600;text-decoration:none;padding:6px 14px;border-radius:999px;
+  border:1px solid var(--line-strong);background:color-mix(in srgb,var(--surface) 55%,transparent);color:var(--ink);transition:border-color .15s,transform .15s}
+.jump a:hover{border-color:var(--ink);transform:translateY(-1px)}
+
+section{padding-top:40px;scroll-margin-top:14px}
+h2{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.16em;color:var(--ink);margin:0 0 14px}
+h2::after{background:var(--line-strong)}
+h2::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--brand-orange);flex:none}
+
+.stat,.reels a,.offer div,.contact,.pub>div,.cases a,.affc,.prof a,.peca,.state{
+  border-radius:var(--r);background:color-mix(in srgb,var(--surface) 82%,transparent);
+  border:1px solid var(--line);box-shadow:0 1px 0 rgba(255,255,255,.04) inset}
+.offer div,.affc,.prof a,.peca{border-left:1px solid var(--line)}
+.prof a:hover,.reels a:hover,.cases a:hover,.stat:hover,.peca:hover{border-color:var(--line-strong)}
+.cases a{border-top:1px solid var(--line)}
+.cases a:hover{border-top-color:var(--line-strong)}
+.prof a.menor{border-left-color:var(--line)}
+.prof a.destacat{border-left-width:1px;border-color:var(--brand-blue)}
+.contact{border-color:var(--ink)}
+.chips li{border-radius:999px;background:color-mix(in srgb,var(--surface) 70%,transparent)}
+.code{border-radius:12px}
+.affc .btn{border-radius:999px}
+.reels a::before{font-family:var(--mono);font-size:13px}
+.pub li i{height:5px;border-radius:3px}
+
+/* les figures: foto arrodonida i més grossa, com una icona d'app */
+.peca{padding:12px 14px 12px 12px;gap:15px}
+.peca img{width:84px;border-radius:16px;box-shadow:0 0 0 1px var(--line)}
+.peca .capfoto{width:84px;height:125px;border-radius:16px}
+.peca .d b{font-size:16px}
+.peca .on a{font-size:11.5px;padding:4px 10px}
+@media(max-width:380px){.peca img,.peca .capfoto{width:64px}.peca .capfoto{height:95px}}
+
+footer{text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.04em;margin-top:46px}
+
+@media(prefers-reduced-motion:no-preference){
+  header>*,section{animation:puja .55s cubic-bezier(.2,.7,.2,1) both}
+  section:nth-of-type(2){animation-delay:.05s}section:nth-of-type(3){animation-delay:.1s}section:nth-of-type(4){animation-delay:.15s}
+  @keyframes puja{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}}
+
+/* codis de descompte: entren desenfocats i escalonats quan s'arriba a la secció, i s'aixequen en passar-hi */
+.affc{transition:transform .25s cubic-bezier(.2,.7,.2,1),border-color .2s,box-shadow .25s}
+.affc:not(.in){opacity:0}
+.affc.in{animation:revela .75s cubic-bezier(.2,.7,.2,1) backwards;animation-delay:calc(var(--i,0)*110ms)}
+.affc.in:hover{transform:translateY(-4px);border-color:var(--brand-orange);box-shadow:0 18px 36px -20px var(--glow),0 0 0 1px var(--brand-orange)}
+.affc .pct{transition:transform .25s}
+.affc.in:hover .pct{transform:scale(1.12)}
+.code{transition:transform .15s,border-color .2s,background .2s}
+.code:active{transform:scale(.96)}
+@keyframes revela{from{opacity:0;filter:blur(12px);transform:translateY(18px) scale(.95)}to{opacity:1;filter:blur(0);transform:none}}
+@media(prefers-reduced-motion:reduce){.affc:not(.in){opacity:1}.affc.in{animation:none}.affc.in:hover{transform:none}}
 </style>
 </head>
 <body>
@@ -219,6 +300,8 @@ footer{margin-top:40px;font-size:12px;color:var(--ink-soft)}
     <a class="btn" href="https://www.youtube.com/@zenkai3dstudio" target="_blank" rel="noopener">YouTube</a>
   </div>
 </header>
+
+<nav class="jump" id="jump" aria-label="Sections" hidden></nav>
 
 <p class="state" id="state" hidden></p>
 
@@ -261,13 +344,7 @@ footer{margin-top:40px;font-size:12px;color:var(--ink-soft)}
   <p class="prizes" id="prizes" hidden></p>
 </section>
 
-<section id="s-aff" hidden>
-  <h2 data-t="codes"></h2>
-  <p class="foot" style="margin:0 0 12px" data-t="codesHint"></p>
-  <div class="aff" id="aff"></div>
-</section>
-
-<section>
+<section id="s-collab">
   <h2 data-t="collab"></h2>
   <div class="offer">
     <div><h3 data-t="o1t"></h3><p data-t="o1"></p></div>
@@ -277,7 +354,7 @@ footer{margin-top:40px;font-size:12px;color:var(--ink-soft)}
   </div>
 </section>
 
-<section>
+<section id="s-contact">
   <h2 data-t="contact"></h2>
   <div class="contact">
     <p data-t="contactLine"></p>
@@ -687,10 +764,22 @@ function copiaVell(s) {
   } catch (e) {}
 }
 
+
+/* Salts ràpids: una píndola per cada secció que es veu, amb el títol que té. */
+function pintaNav() {
+  var nav = $("jump"); if (!nav) return;
+  var h = [];
+  Array.prototype.forEach.call(document.querySelectorAll("section[id]"), function (sec) {
+    if (sec.hidden) return;
+    var t2 = sec.querySelector("h2"); if (!t2 || !t2.textContent.trim()) return;
+    h.push('<a href="#' + sec.id + '">' + esc(t2.textContent.replace(/,.*$/, "")) + '</a>');
+  });
+  nav.innerHTML = h.join(""); nav.hidden = !h.length;
+}
 function canvia(l) {
   if (LANGS.indexOf(l) < 0) return;
   L = l; lsSet(KEY, l);
-  textos(); pinta(); pintaPerfils(); pintaAfiliats();
+  textos(); pinta(); pintaPerfils(); pintaAfiliats(); pintaNav();
 }
 Array.prototype.forEach.call($("lang").querySelectorAll("button"), function (b) {
   b.onclick = function () { canvia(b.dataset.l); };
@@ -719,7 +808,7 @@ json("dossier-config.json").then(function (c) { C = c; }, function () { C = null
   pintaPerfils(); pintaAfiliats();
   return json("dossier.json").then(function (d) {
     D = d;
-    pinta();
+    pinta(); pintaNav();
   });
 }).catch(function () { $("state").hidden = false; });
 </script>
