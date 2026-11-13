@@ -273,10 +273,10 @@ footer{text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.
 .code:active{transform:scale(.96)}
 @keyframes revela{from{opacity:0;filter:blur(12px);transform:translateY(18px) scale(.95)}to{opacity:1;filter:blur(0);transform:none}}
 @media(prefers-reduced-motion:reduce){.affc:not(.in){opacity:1}.affc.in{animation:none}.affc.in:hover{transform:none}}
-/* logo en horitzontal: la icona a l'esquerra i el nom al costat; els idiomes, a sobre */
+/* logo en horitzontal: la icona a l'esquerra i el nom al costat; els idiomes, a sobre. La icona va en quadrat, sense rodona */
 .brandbar{display:grid;grid-template-columns:auto auto;justify-content:center;align-items:center;column-gap:22px;row-gap:0}
 .brandbar .lang{position:static;order:-1;grid-column:1/-1;justify-self:center;width:auto;margin:0 0 18px}
-.brandmark{width:64px;height:64px}
+.brandmark{width:64px;height:64px;border-radius:12px;box-shadow:0 14px 30px -12px var(--glow)}
 .brandname{font-size:28px;line-height:1.05}
 </style>
 </head>
